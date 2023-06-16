@@ -1,7 +1,9 @@
+import Task_2.Task_2;
+
 import java.util.Random;
 import java.util.Scanner;
 
-public class Main {
+public class Main extends Task_2{
     private static void Raznost (Integer[] mas1, Integer[] mas2 ) {
         Integer [] mas3 = new Integer[mas1.length];
         System.out.printf("Разность массивов: ");
@@ -95,7 +97,14 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner read_line = new Scanner(System.in);
-        System.out.printf("Вводим массив сами или нет? (y/n) \n");
-        Chois_mas(read_line.nextLine());
+        System.out.println("Введите номер домашнего задания (1 или 2):");
+        String answer = read_line.next();
+        if (answer.equals("1")){
+            System.out.printf("Вводим массив сами или нет? (y/n) \n");
+            Chois_mas(read_line.nextLine());
+        } else if (answer.equals("2")) {
+            Insert_number();
+        }
+
     }
 }
